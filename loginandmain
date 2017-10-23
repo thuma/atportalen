@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.lang.builder import Builder
@@ -12,13 +15,14 @@ Builder.load_string("""
     Button:
       text: 'Anställning - Ledighet'
       background_color: [ 68, 44, 44, 0.5 ]
+      on_press: root.manager.current = 'textview'
     Button:
       text: 'Tjänstgöring - Schema - Legitimation'
       background_color: [ 68, 44, 44, 0.5 ]
     Button:
       #text: 'Utbildning - Kurser'
       background_color: [ 68, 44, 44, 0.5 ]
-      text: 'Utbildning - Kurser' if self.state == 'normal' else 'Release me!'	  
+      text: 'Utbildning - Kurser' if self.state == 'normal' else 'Release me!'
     Button:
       text: 'Utbildning - Kurser'
       background_color: [ 68, 44, 44, 0.5 ]
@@ -38,18 +42,18 @@ Builder.load_string("""
       text: 'Logga ut'
       background_color: [ 68, 44, 44, 0.5 ]
       on_press: root.manager.current = 'loggain'
-	
+
 <LoginScreen>:
   BoxLayout:
     orientation: "vertical"
     cols: 1
     spacing: 5
     background_color: [ 200, 44, 44, 0.5 ]
-    Label: 
+    Label:
       text:'Välkommen AT Läkare'
     Label:
       text:'Skriv in dina initialer'
-	  
+
     #Define username widget
     Label:
       text:'Användarnamn'
@@ -65,22 +69,43 @@ Builder.load_string("""
     Button:
       text: 'Logga in'
       on_press: root.manager.current = 'mainmenu'
-      background_color: [ 68, 44, 44, 0.5 ]	
+      background_color: [ 68, 44, 44, 0.5 ]
+
+<TextScreen>:
+  BoxLayout:
+    orientation: "vertical"
+    cols: 1
+    spacing: 5
+    background_color: [ 200, 44, 44, 0.5 ]
+    Label:
+      text:'Anställning - Ledighet'
+    Label:
+      text_size: self.size
+      halign: 'left'
+      valign: 'top'
+      text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    Button:
+      text: 'Tillbaka'
+      on_press: root.manager.current = 'mainmenu'
+      background_color: [ 68, 44, 44, 0.5 ]
 """)
 
 class LoginScreen(Screen):
-    pass	
+    pass
 class AtPortal(Screen):
     pass
-	
+class TextScreen(Screen):
+    pass
+
 sm = ScreenManager()
 
 sm.add_widget(LoginScreen(name='loggain'))
 sm.add_widget(AtPortal(name='mainmenu'))
+sm.add_widget(TextScreen(name='textview'))
 
 class ATApp(App):
     def build(self):
         return sm
-		
+
 if __name__ == '__main__':
     ATApp().run()
