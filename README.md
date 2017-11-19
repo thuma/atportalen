@@ -11,8 +11,11 @@ Ladda ner här: https://kivy.org/#download
   brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer
 
   virtualenv atenv
+  
   source atenv/bin/activate
+  
   pip install -I Cython==0.25.2
+  
   pip install kivy
 
 ## För Windows:
