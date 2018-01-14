@@ -8,11 +8,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="295.27499mm"
-   height="50.270832mm"
+   width="69.577721mm"
+   height="60.39156mm"
    id="svg2"
    inkscape:version="0.91 r13725"
-   viewBox="0 0 295.27499 50.270832"
+   viewBox="0 0 69.57772 60.39156"
    sodipodi:docname="logga_f6.svg"
    inkscape:export-filename="/Users/thuma/repos/atportalen/bilder/ikon.png"
    inkscape:export-xdpi="640.19275"
@@ -43,13 +43,17 @@
      id="namedview131"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1"
+     inkscape:zoom="2.1523438"
      inkscape:cx="161.39658"
-     inkscape:cy="166.60159"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cy="179.6468"
+     inkscape:window-x="111"
+     inkscape:window-y="43"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="svg2"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs4">
     <pattern
@@ -75,11 +79,12 @@
   </defs>
   <path
      style="fill:#7e7e7e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28222221px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5317)"
-     d="M 5.5446088,-1.3904071 34.735512,48.903806 64.529052,-1.3904071 Z"
+     d="M 5.5446088,5.0486738 34.735512,55.342887 64.529052,5.0486738 Z"
      id="path5307"
      inkscape:connector-curvature="0" />
   <g
-     id="g5349">
+     id="g5349"
+     transform="translate(0,6.4390809)">
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -104,7 +109,8 @@
        style="fill:#009453;fill-opacity:1;fill-rule:nonzero;stroke:none" />
   </g>
   <g
-     id="g5340">
+     id="g5340"
+     transform="translate(0,6.4390809)">
     <path
        sodipodi:nodetypes="cscssssssssssssssccc"
        inkscape:connector-curvature="0"
