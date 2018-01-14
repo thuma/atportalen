@@ -142,8 +142,12 @@ Builder.load_string("""
       cols: 1
       spacing: 5
       Label:
+        size: (403, 50)
+        size_hint: (None, None)
         text:'Anställning - Ledighet'
       ScrollView:
+        do_scroll_x: False
+        size: (403, 800)
         Label:
           color: 0,0,0,1
           text_size: root.width, None
@@ -151,14 +155,16 @@ Builder.load_string("""
           halign: 'left'
           valign: 'top'
           id: 'text'
+          size_hint_y: None
           text: root.text_data
-          height: self.texture_size[1]
       Button:
         text: 'Tillbaka'
         background_normal: ""
         color: 0,0,0,1
         background_color: [1,0,0, 1]
         on_press: root.current = 'mainmenu'
+        size_hint: (None, None)
+        size: (403, 50)
 """)
 
 class AtPortal(ScreenManager):
