@@ -172,6 +172,7 @@ class AtPortal(ScreenManager):
 
 class ATApp(App):
     def build(self):
+        self.icon = 'bilder/icon.png'
         return AtPortal()
 
 if __name__ == '__main__':
