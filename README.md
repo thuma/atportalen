@@ -10,10 +10,13 @@ Ladda ner här: https://kivy.org/#download
 
   brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer  
 
-  virtualenv atenv
+  virtualenv atenv  
   source atenv/bin/activate  
   pip install -I Cython==0.25.2  
   pip install kivy  
+  pip install pillow  
+  pip install pygame  
+
 
 ## För Windows:
 
@@ -22,6 +25,8 @@ Ladda ner här: https://kivy.org/#download
   python -m pip install kivy.deps.gstreamer  
   python -m pip install kivy.deps.angle  
   python -m pip install kivy  
+  python -m pip install pip install pillow  
+  python -m pip install pip install pygame  
 
 # Appen ska ha
 

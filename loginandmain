@@ -6,6 +6,17 @@ from kivy.uix.button import Button
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
+from kivy.graphics import Color
+
+def hexToKivyColor(hex):
+  if hex[0] == "#":
+    hex = hex[1:]
+  r = float(int(hex[0:2],16))/255.0
+  g = float(int(hex[2:4],16))/255.0
+  b = float(int(hex[4:6],16))/255.0
+  return [ r,g,b ]
+
+print hexToKivyColor("#a3c7e3")
 
 atintro = """
 Bra att veta som nyanställd.
@@ -41,6 +52,13 @@ Builder.load_string("""
   Screen:
     name: 'loggain'
     BoxLayout:
+      canvas.before:
+        Color:
+          rgb: 1, 1, 1
+        BorderImage:
+          size: self.size
+          pos: self.pos
+          source: 'bilder/bakgrund.png'
       orientation: "vertical"
       cols: 1
       spacing: 5
@@ -102,15 +120,22 @@ Builder.load_string("""
     name: 'textscreen'
     manager: 'manager'
     BoxLayout:
+      canvas.before:
+        Color:
+          rgba: 0.6392156862745098, 0.7803921568627451, 0.8901960784313725, 1
+        Rectangle:
+          pos: self.pos
+          size: self.size
       orientation: "vertical"
       cols: 1
       spacing: 5
-      background_color: [ 200, 44, 44, 0.5 ]
       Label:
         text:'Anställning - Ledighet'
       ScrollView:
         Label:
-          text_size: self.size
+          color: 0,0,0,1
+          text_size: root.width, None
+          size: self.texture_size
           halign: 'left'
           valign: 'top'
           id: 'text'
