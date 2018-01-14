@@ -7,6 +7,9 @@ from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
 from kivy.graphics import Color
+from kivy.config import Config
+Config.set('graphics', 'width', '403')
+Config.set('graphics', 'height', '768')
 
 def hexToKivyColor(hex):
   if hex[0] == "#":
@@ -54,7 +57,7 @@ Builder.load_string("""
     BoxLayout:
       canvas.before:
         Color:
-          rgb: 1, 1, 1
+          rgba: 1, 1, 1, 1
         BorderImage:
           size: self.size
           pos: self.pos
@@ -62,7 +65,6 @@ Builder.load_string("""
       orientation: "vertical"
       cols: 1
       spacing: 5
-      background_color: [ 200, 44, 44, 0.5 ]
       Label:
         text:'Välkommen AT Läkare'
       Label:
@@ -80,8 +82,10 @@ Builder.load_string("""
         password:True
       #Define login widget
       Button:
+        background_normal: ""
         text: 'Logga in'
-        background_color: [ 68, 44, 44, 0.5 ]
+        color: [0,0,0]
+        background_color: [1.0, 1.0, 1.0, 1.0]
         on_press: root.current = 'mainmenu'
   Screen:
     name: 'mainmenu'
@@ -113,8 +117,9 @@ Builder.load_string("""
         text: 'Kontakt'
         background_color: [ 68, 44, 44, 0.5 ]
       Button:
+        background_normal: ""
         text: 'Logga ut'
-        background_color: [ 68, 44, 44, 0.5 ]
+        background_color: [ 0, 0, 1, 1 ]
         on_press: root.current = 'loggain'
   Screen:
     name: 'textscreen'
@@ -143,7 +148,9 @@ Builder.load_string("""
           height: self.texture_size[1]
       Button:
         text: 'Tillbaka'
-        background_color: [ 68, 44, 44, 0.5 ]
+        background_normal: ""
+        color: 0,0,0,1
+        background_color: [1,0,0, 1]
         on_press: root.current = 'mainmenu'
 """)
 
@@ -155,4 +162,5 @@ class ATApp(App):
         return AtPortal()
 
 if __name__ == '__main__':
-     ATApp().run()
+     atp = ATApp()
+     atp.run()
