@@ -65,41 +65,38 @@ Builder.load_string("""
       #spacing: 2
       Label:
         text:'Välkommen AT Läkare'
-		pos_hint: {'x':0.25, 'y':.6}
-		size_hint: 0.5, 0.3
-		font_size: '20sp'
+	pos_hint: {'x':0.25, 'y':.6}
+	size_hint: 0.5, 0.3
+	font_size: '20sp'
       	#spacing_horizontal: 1
       Label:
         text: 'Skriv in dina initialer'
-		pos_hint: {'x':0.25, 'y':0.46}
-		size_hint: 0.5, 0.3
-		font_size: '17sp'
+	pos_hint: {'x':0.25, 'y':0.46}
+	size_hint: 0.5, 0.3
+	font_size: '17sp'
       #Define username widget
-	  Label:
-	    text:'Användarnamn'
-	    pos_hint: {'x':0.25, 'y':0.39}
-		size_hint: 0.5, 0.3
-      TextInput:
-	    pos_hint: {'x':0.25, 'y':0.47}
-		size_hint: 0.5, 0.05
-		multiline:False
       Label:
-	    pos_hint: {'x':0.25, 'y':0.36}
-		size_hint: 0.5, 0.1
-	    text:'Lösenord'
-	  TextInput:
-	    pos_hint: {'x':0.25, 'y':0.34}
-		size_hint: 0.5, 0.05
+        text:'Användarnamn'
+	pos_hint: {'x':0.25, 'y':0.39}
+	size_hint: 0.5, 0.3
+      TextInput:
+	pos_hint: {'x':0.25, 'y':0.47}
+	size_hint: 0.5, 0.05
+	multiline:False
+      Label:
+	pos_hint: {'x':0.25, 'y':0.36}
+	size_hint: 0.5, 0.1
+	text:'Lösenord'
+      TextInput:
+        pos_hint: {'x':0.25, 'y':0.34}
+	size_hint: 0.5, 0.05
         multiline:False
-	    password:True
+	password:True
       #Define login widget
       Button:
-        #pos_hint: {'None':None}
-		#pos: 40, 40
         size_hint: 0.5, 0.1
         pos_hint: {'x':0.25, 'y':.2}
         text: 'Logga in'
-    #color: [0,0,0]
         background_color: [1.0, 1.0, 1.0, 1.0]
         on_press: root.current = 'mainmenu'
   Screen:
