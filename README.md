@@ -1,12 +1,20 @@
 # atportalen
-SU AT Portalens APP
+SU - AT Portalen APP
 
-# Vi använder Kivy för att skapa appen.
+## Android app
+
+För att installera android appen ladda ner:
+AT-Portalen_V1.apk och installera på din telefon.
+
+För att installera på telefonen måste du aktivera - tillåt appar fran andra källor - 
+
+För Kivy projektet finns följande info:
+### Vi använder Kivy för att skapa appen.
 Finns här: https://kivy.org/#home
 
 Ladda ner här: https://kivy.org/#download
 
-## För Mac:
+#### För Mac:
 
   brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer gstreamer  
 
@@ -18,7 +26,7 @@ Ladda ner här: https://kivy.org/#download
   pip install pygame  
 
 
-## För Windows:
+#### För Windows:
 
   python -m pip install --upgrade pip wheel setuptools  
   python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew  
@@ -28,7 +36,7 @@ Ladda ner här: https://kivy.org/#download
   python -m pip install pip install pillow  
   python -m pip install pip install pygame  
 
-# Appen ska ha
+#### Appen ska ha
 
 1. Inloggnings-sida.
 2. Sida med
