@@ -6,5 +6,5 @@ SU - AT Portalen APP
 För att installera android appen ladda ner:
 [AT-Portalen_V1.apk](https://github.com/thuma/atportalen/raw/master/AT-Portalen_V1.apk) och installera på din telefon.
 
-För att installera på telefonen måste du aktivera - tillåt appar fran andra källor - 
+För att installera på telefonen måste du aktivera - [tillåt appar fran andra källor](http://www.android.pk/blog/tutorials/how-to-enable-third-party-apps-installation-on-android-phones/) - 
 
